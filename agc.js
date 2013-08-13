@@ -79,11 +79,10 @@
 
 				// If _slides is only a single element which is a ul with li children,
 				//	make those li children the _slides
-				if (_slides.length === 1 && _slides[0].tagName === "UL" && _slides.children('li').length) {
+				if (_slides.length == 1 && _slides[0].tagName == "UL" && _slides.children('li').length) {
 					_slides = _slides.children('li');
 					hasContainer = true;
 				}
-				
 
 				_slides.each(function(i) {
 	
@@ -303,7 +302,7 @@
 				}
 				
 				_auto = setTimeout(function () {
-					c.Next();
+					c.Next.apply(c, [null, _carousel, this]);
 				}, _options.autoplay * 1000)
 				
 			}
