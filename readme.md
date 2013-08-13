@@ -58,10 +58,13 @@ Also supports swiping on touch devices, and keyboard left & right controls.
 * `prev` : function to be called when carousel goes to the previous slide, overrides the default behaviour, optional
 * `setZOrder` : flag to set the z-order of slides, useful if you're stacking them, not laying them out side-by-size, optional, `default : false`
 
+### Works on
 
+Chrome, FF, Safari, Mobile Safari, IE7+ - nothing else tested.
 
 
 ### Requirements
 
 * jQuery
 * Modernizr (with `.csstransforms`, `.csstransforms3d`, `.prefixed()`, and `.touch` - [get a custom build here](http://modernizr.com/download/#-csstransforms-csstransforms3d-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load))
+* requestAnimationFrame ([which you can get a polyfill for here](https://gist.github.com/paulirish/1579671))
