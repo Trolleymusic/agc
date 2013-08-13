@@ -64,4 +64,4 @@ Also supports swiping on touch devices, and keyboard left & right controls.
 ### Requirements
 
 * jQuery
-* Modernizr (with `.csstransforms`, `.csstransforms3d`, `.prefixed()`, and `.touch` - [http://modernizr.com/download/#-csstransforms-csstransforms3d-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load](get a custom build here))
+* Modernizr (with `.csstransforms`, `.csstransforms3d`, `.prefixed()`, and `.touch` - [get a custom build here](http://modernizr.com/download/#-csstransforms-csstransforms3d-touch-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load))
