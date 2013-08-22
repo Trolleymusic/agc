@@ -14,6 +14,8 @@
 
 			this.Make = function (element, o) {
 				var c;
+				
+				o = o || {};
 
 				_carousel = (element || o.carousel);
 				if (!_carousel.length) { return; }
