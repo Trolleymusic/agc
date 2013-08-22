@@ -49,6 +49,14 @@
 					c.Close.apply(c, [e, _carousel, this]);
 				});
 				
+				//Go to specific slides from the controls
+				_controls.find("a[href]").filter(function () {
+					return (!isNaN(c.FindASlide($(this).attr("href"))));
+				}).on("click", function (e) {
+					e.preventDefault();
+					c.GoToLink($(this).attr("href"));
+				});
+				
 				// These are inter-slide links:
 				c.GoTo = o.goTo || c.GoTo;
 				_carousel.find('a').filter(function () { if (!$(this).attr('href')) { return false; } return $(this).attr('href').match(/\#\d+/); }).bind('click', function (e) {
