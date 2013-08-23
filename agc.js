@@ -292,7 +292,7 @@
 				if (!_options.autoplay) { return; }
 				this.Autonext();
 			}
-
+			
 			this.ResetAutonext = function () {
 				var c;
 				if (_options.autoplay) {
@@ -303,13 +303,17 @@
 				}
 			}
 			
-			this.Autonext = function () {
-				var c = this;
-
+			this.StopAutonext = function () {
 				if (_auto) {
 					clearTimeout(_auto);
 					_auto = null;
 				}
+			}
+			
+			this.Autonext = function () {
+				var c = this;
+
+				this.StopAutonext();
 				
 				_auto = setTimeout(function () {
 					c.Next.apply(c, [null, _carousel, this]);
