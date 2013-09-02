@@ -65,7 +65,8 @@
 					c.GoTo(parseInt($(this).attr('href').replace('#',''), 10) - 1);
 				});
 				
-				_options.keyboard === undefined ? true : _options.keyboard;
+				_options.keyboard = _options.keyboard === undefined ? true : _options.keyboard;
+				_options.fallbackAnimation = _options.fallbackAnimation === undefined ? 500 : _options.fallbackAnimation;
 
 				
 				this.element = _carousel;
@@ -181,8 +182,10 @@
 					_container.get(0).style[Modernizr.prefixed('transform')] = "translate3d(" + offset +",0,0)";
 				} else if (Modernizr.csstransforms) {
 					_container.get(0).style[Modernizr.prefixed('transform')] = "translate(" + offset +",0)";
+				} else if (_options.fallbackAnimation) {
+					_container.animate({'left' : offset}, _options.fallbackAnimation);
 				} else {
-					_container.css('left', offset);
+					_container.css({'left' : offset});
 				}		
 			}
 			
@@ -331,4 +334,3 @@
 		return new agc(this, options);
 	});
 })( jQuery );
-	
