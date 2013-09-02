@@ -64,6 +64,8 @@
 					e.stopPropagation();
 					c.GoTo(parseInt($(this).attr('href').replace('#',''), 10) - 1);
 				});
+				
+				_options.keyboard === undefined ? true : _options.keyboard;
 
 				
 				this.element = _carousel;
@@ -155,7 +157,7 @@
 						c.Close.apply(c, [e, _carousel, this])
 					});
 						
-				} else {
+				} else if (_options.keyboard) {
 					// Keyboard / arrow control
 					$(document).on('keyup', function (e) {
 						if (el.height()) {

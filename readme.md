@@ -50,6 +50,7 @@ Also supports swiping on touch devices, and keyboard left & right controls.
 * `doNotMove` : flag for plugin to not move the slides when next/prev is called, optional, `default : false`
 * `doNotScroll` : legacy/duplicate flag of doNotMove, optional, `default : false`
 * `goTo` : function to be called when carousel has to goto a specific slide, overrides the default behaviour, optional
+* `keyboard` : boolean, keyboard arrows move slides, optional, `default : true`
 * `mark` : object indicating that certain slides should be marked with classes to identify them, optional, `default : null`
   * `current` : string, the class applied to the current slide, optional
   * `next` : string, the class applied to the next slide, optional
